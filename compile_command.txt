@@ -1,0 +1,1 @@
+nuitka .\main.py --standalone --windows-icon-from-ico=..\YOUNG\icon2.ico --include-data-dir=..\YOUNG\data=data --disable-console
