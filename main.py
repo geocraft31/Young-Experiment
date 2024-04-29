@@ -454,6 +454,8 @@ visualitzar els diferents patrons d'interferència (constructiva i destructiva) 
 
                 elif textButton.rect.collidepoint(event.pos) and MENU == "MAIN":
                     MENU = "EXPLANATION"
+                    pygame.mixer.music.load("data/BrawlStars.mp3")
+                    pygame.mixer.music.play()
                     DISPLAY.fill((0, 0, 0))
                     
                 elif bonusButton.rect.collidepoint(event.pos) and MENU == "MAIN":
