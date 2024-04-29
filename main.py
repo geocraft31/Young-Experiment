@@ -365,7 +365,7 @@ def main():
     simulationButton = Button(50, 40, "Simulació")
     optionButton = Button(50, 170, "Opcions")
     textButton = Button(50, 300, "Explicació")
-    escLabel = Label(47, 500, "Prem la tecla 'Esc' per tornar al menu principal", size=30, font='arial')
+    escLabel = Label(47, 500, "Prem la tecla 'Esc' per tornar al menu principal", size=30, font='gloria')
     youngTitle = Label(550, 50, "EXPERIMENT\nDE\nYOUNG", True, 72)
     autorsTitle = Label(550, 200, "Fet per: Jaume Majó i Josep Barnada", size=24, font="arial")
     shrekAprovedImage = pygame.image.load("data/shrekApproved.jpg").convert()
@@ -373,13 +373,14 @@ def main():
     video33 = cv2.VideoCapture("data/FA33.mp4")
     videoNanoFPS = video33.get(cv2.CAP_PROP_FPS)
     thanksButton = Button(600, 865, "Agraïments")
+    ivanJediImage = pygame.image.load("data/OBIIVAN.png").convert()
     pygame.mixer.init()
     
     # THANKS MENU
     thanksText = Label(5, 5, multiline=True, size=28, font='Arial', text="""Hola Ivan, abans que surtis d'aquí et voldriem agraïr el teu esforç i la paciència. Esperem que t'ho hagis passat bé i hagis aprés molt al llarg d'aquesta experiència. Per últim, recorda que, tot i que l'animació pugui semblar senzilla, realment ha costat molt.
 
 Agraïments:
-A l'Ivan calvo, per haver confiat sempre en nosaltres i haver executat aquest programa (espero que l'hagis obert). A en Fernando Alonso, pel seu meravellós mewing. A en Mike Wazowski (Ivan 2) i l'Avestrús per ser els pilars fonamentals en la creació d'aquest treball. I, com no podia faltar, l'Shrek, pel seu segell de qualitat indispensable per a la certificació del treball. Evidentment, a en Thomas Young, que sense els seus experiments no hagués estat possible aquest treball. També volem agrair a en Miquel Àngel per no posar pràctiques d'història sobre el Tema 9: La restauració democràtica, ja que el temps que haguéssim utilitzat en fer les pràctiques (33 hores), l'hem pogut invertir en acabar el projecte de YOUNG a temps. Finalment, NO volem agrair a l'Anna Puigdevall per haver vingut a fer de policia a una classe de física i per dubtar de les capacitats del professor del mestre Jedi Ivan Fernandez III.
+A l'Ivan, per haver confiat sempre en nosaltres i haver executat aquest programa (espero que l'hagis obert). A en Fernando Alonso, pel seu meravellós mewing. A en Mike Wazowski (Ivan 2) i l'Avestrús per ser els pilars fonamentals en la creació d'aquest treball. I, com no podia faltar, l'Shrek, pel seu segell de qualitat indispensable per a la certificació del treball. Evidentment, a en Thomas Young, que sense els seus experiments no hagués estat possible aquest treball. També volem agrair a en Miquel Àngel per no posar pràctiques d'història sobre el Tema 9: La restauració democràtica, ja que el temps que haguéssim utilitzat en fer les pràctiques (33 hores), l'hem pogut invertir en acabar el projecte de YOUNG a temps. Finalment, NO volem agrair a l'Anna Puigdevall per haver vingut a fer de policia a una classe de física i per dubtar de les capacitats del professor del mestre Jedi Ivan Fernandez III.
 
 Ara sí que has arribat al final del treball, abans, però, com que sabem que faràs un cop surtis d'aquí, mira aquest últim vídeo.
                       """)
@@ -504,6 +505,7 @@ visualitzar els diferents patrons d'interferència (constructiva i destructiva) 
             escLabel.draw(DISPLAY)
             youngTitle.draw(DISPLAY)
             autorsTitle.draw(DISPLAY)
+            DISPLAY.blit(ivanJediImage, (575, 350))
             DISPLAY.blit(shrekAprovedImage, (50, 550))
             bonusButton.draw(DISPLAY)
             thanksButton.draw(DISPLAY)
