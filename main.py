@@ -384,7 +384,7 @@ def main():
 Agraïments:
 A l'Ivan, per haver confiat sempre en nosaltres i haver executat aquest programa (espero que l'hagis obert). També voldríem agrair a en Genís pel seu mitiquíssim "BRAWL STARS" durant l'explicació. A en Fernando Alonso, pel seu meravellós mewing. A en Mike Wazowski (Ivan 2) i l'Avestrús (Ivan 3) per ser els pilars fonamentals en la creació d'aquest treball. I, com no podia faltar, l'Shrek, pel seu segell de qualitat indispensable per a la certificació del treball. Evidentment, a en Thomas Young, que sense els seus experiments no hagués estat possible aquest treball. També volem agrair a en Miquel Àngel per no posar pràctiques d'història sobre el Tema 9: La restauració democràtica, ja que el temps que haguéssim utilitzat en fer les pràctiques (33 hores), l'hem pogut invertir en acabar el projecte de YOUNG a temps. Finalment, NO volem agrair a l'Anna Puigdevall per haver vingut a fer de policia a una classe de física i per dubtar de les capacitats del professor del mestre Jedi Ivan Fernandez III.
 
-Ara sí que has arribat al final del treball, abans, però, com que sabem que faràs un cop surtis d'aquí, mira aquest últim vídeo.
+Ara sí que has arribat al final del treball, abans, però, com que ja sabem que faràs un cop surtis d'aquí, mira aquest últim vídeo.
                       """)
     eldenRingButton = Button(325, 800, "Video Final")
     videoER = cv2.VideoCapture("data/EldenRing.mp4")
