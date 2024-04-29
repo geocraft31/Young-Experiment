@@ -387,7 +387,9 @@ Ara sí que has arribat al final del treball, abans, però, com que sabem que fa
     eldenRingButton = Button(350, 800, "Video Final")
     videoER = cv2.VideoCapture("data/EldenRing.mp4")
     videoER_FPS = videoER.get(cv2.CAP_PROP_FPS)
-
+    ivanImage = pygame.image.load("data/ivanFacha.png").convert()
+    ivanImage = pygame.transform.scale(ivanImage, (300, 300))
+    
     # OPTIONS MENU
     herzosLabel = Label(50, 50, "Freqüència:")
     herzos = Entry(200, 50, text="60 Hz")
@@ -538,6 +540,7 @@ visualitzar els diferents patrons d'interferència (constructiva i destructiva) 
 
         elif MENU == "THANKS":
             thanksText.draw(DISPLAY)
+            DISPLAY.blit(ivanImage, (50, 650))
             eldenRingButton.draw(DISPLAY)
             if playVideoER:
                 if not playAudioER:
