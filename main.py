@@ -390,9 +390,11 @@ Ara sí que has arribat al final del treball, abans, però, com que sabem que fa
     # OPTIONS MENU
     herzosLabel = Label(50, 50, "Freqüència:")
     herzos = Entry(200, 50, text="60 Hz")
-    applySettings = Button(50, 100, "Aplicar")
+    applySettings = Button(60, 150, "Aplicar")
     jajaLabel = Label(300, 40, "Ja t'agradaria Ivan", font='arial', size=32)
     ostrichImage = pygame.image.load('data/avestruz.png').convert()
+    trollLabel = Label(50, 90, "Ivan prova de modificar la freqüència, 60 Hz és molt poca cosa.", font='arial', size=28)
+    ostrich = False
     
 
     # EXPLANATION MENU
@@ -475,7 +477,7 @@ visualitzar els diferents patrons d'interferència (constructiva i destructiva) 
                     time.sleep(2)
                     webbrowser.open('https://www.pccomponentes.com/asus-tuf-gaming-vg279q1r-27-led-ips-fullhd-144hz-freesync')
                     time.sleep(0.5)
-                    DISPLAY.blit(ostrichImage, (125, 200))
+                    ostrich = True
 
             if event.type == pygame.KEYDOWN and MENU != "MAIN" and not playVideoER:
                 if event.key == 27:
@@ -521,6 +523,10 @@ visualitzar els diferents patrons d'interferència (constructiva i destructiva) 
             herzos.draw(DISPLAY)
             herzosLabel.draw(DISPLAY)
             applySettings.draw(DISPLAY)
+            trollLabel.draw(DISPLAY)
+            if ostrich:
+                DISPLAY.blit(ostrichImage, (125, 200))
+            
 
         elif MENU == "EXPLANATION":
             textLabel.draw(DISPLAY)
