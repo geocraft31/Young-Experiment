@@ -490,6 +490,7 @@ visualitzar els diferents patrons d'interferència (constructiva i destructiva) 
             if event.type == pygame.KEYDOWN and MENU != "MAIN" and not playVideoER:
                 if event.key == 27:
                     DISPLAY.fill((0, 0, 0))
+                    ostrich = False
                     for wave in WAVE_LIST:
                         wave.canDraw = True
                         wave.time = 0
