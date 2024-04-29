@@ -365,7 +365,7 @@ def main():
     simulationButton = Button(50, 40, "Simulació")
     optionButton = Button(50, 170, "Opcions")
     textButton = Button(50, 300, "Explicació")
-    escLabel = Label(47, 500, "Prem la tecla 'Esc' per tornar al menu principal", size=30, font='arial')
+    escLabel = Label(47, 500, "Prem la tecla 'Esc' per tornar al menu principal", size=30, font='gloria')
     youngTitle = Label(550, 50, "EXPERIMENT\nDE\nYOUNG", True, 72)
     autorsTitle = Label(550, 200, "Fet per: Jaume Majó i Josep Barnada", size=24, font="arial")
     shrekAprovedImage = pygame.image.load("data/shrekApproved.jpg").convert()
@@ -373,6 +373,7 @@ def main():
     video33 = cv2.VideoCapture("data/FA33.mp4")
     videoNanoFPS = video33.get(cv2.CAP_PROP_FPS)
     thanksButton = Button(600, 865, "Agraïments")
+    ivanJediImage = pygame.image.load("data/OBIIVAN.png").convert()
     pygame.mixer.init()
     
     # THANKS MENU
@@ -454,6 +455,8 @@ visualitzar els diferents patrons d'interferència (constructiva i destructiva) 
 
                 elif textButton.rect.collidepoint(event.pos) and MENU == "MAIN":
                     MENU = "EXPLANATION"
+                    pygame.mixer.music.load("data/BrawlStars.mp3")
+                    pygame.mixer.music.play()
                     DISPLAY.fill((0, 0, 0))
                     
                 elif bonusButton.rect.collidepoint(event.pos) and MENU == "MAIN":
@@ -502,6 +505,7 @@ visualitzar els diferents patrons d'interferència (constructiva i destructiva) 
             escLabel.draw(DISPLAY)
             youngTitle.draw(DISPLAY)
             autorsTitle.draw(DISPLAY)
+            DISPLAY.blit(ivanJediImage, (575, 350))
             DISPLAY.blit(shrekAprovedImage, (50, 550))
             bonusButton.draw(DISPLAY)
             thanksButton.draw(DISPLAY)
