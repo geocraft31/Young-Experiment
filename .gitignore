@@ -2,6 +2,6 @@ __pycache__/
 Environment/
 main.build/
 main.dist/
-data/
+
 *.zip
 test.py
