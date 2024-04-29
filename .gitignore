@@ -4,3 +4,4 @@ main.build/
 main.dist/
 data/
 *.zip
+test.py
