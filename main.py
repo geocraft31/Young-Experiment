@@ -365,7 +365,7 @@ def main():
     simulationButton = Button(50, 40, "Simulació")
     optionButton = Button(50, 170, "Opcions")
     textButton = Button(50, 300, "Explicació")
-    escLabel = Label(50, 500, "Prem la tecla 'Esc' per tornar al menu principal", size=30, font='arial')
+    escLabel = Label(47, 500, "Prem la tecla 'Esc' per tornar al menu principal", size=30, font='arial')
     youngTitle = Label(550, 50, "EXPERIMENT\nDE\nYOUNG", True, 72)
     autorsTitle = Label(550, 200, "Fet per: Jaume Majó i Josep Barnada", size=24, font="arial")
     shrekAprovedImage = pygame.image.load("data/shrekApproved.jpg").convert()
