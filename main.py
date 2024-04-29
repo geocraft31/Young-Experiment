@@ -374,6 +374,8 @@ def main():
     videoNanoFPS = video33.get(cv2.CAP_PROP_FPS)
     thanksButton = Button(600, 865, "Agraïments")
     ivanJediImage = pygame.image.load("data/OBIIVAN.png").convert()
+    youngImage = pygame.image.load("data/youngPureta.png").convert()
+    youngImage = pygame.transform.scale(youngImage, (150, 200))
     pygame.mixer.init()
     
     # THANKS MENU
@@ -513,6 +515,7 @@ visualitzar els diferents patrons d'interferència (constructiva i destructiva) 
             autorsTitle.draw(DISPLAY)
             DISPLAY.blit(ivanJediImage, (575, 350))
             DISPLAY.blit(shrekAprovedImage, (50, 550))
+            DISPLAY.blit(youngImage, (350, 50))
             bonusButton.draw(DISPLAY)
             thanksButton.draw(DISPLAY)
             if playVideoFA:
