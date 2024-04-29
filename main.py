@@ -422,7 +422,7 @@ opaca la qual té una petita escletxa (la qual, com s'ha dit abans, ha de tenir 
 dimensions iguals o inferiors la longitud d'ona del feix de llum). El feix, a causa de la 
 difracció, generarà un nou raig i, aquest, xocarà amb una altra paret (situada al davant de 
 l'altra) que tindrà dues escletxes. De la mateixa manera, aquest raig, quan incideix en 
-l'escletxa, dona lloc a dues noves fonts emissores i, conseqüentment, dos raigs coherents 
+cada escletxa, dona lloc a dues noves fonts emissores i, conseqüentment, dos raigs coherents 
 (és a dir, que tenen la mateixa amplitud i freqüència i amb un desfasament constant) de llum. 
 Després, aquests raigs xocaran a una tercera paret i, gràcies a una pantalla, es podran 
 visualitzar els diferents patrons d'interferència (constructiva i destructiva) dels dos raigs.
