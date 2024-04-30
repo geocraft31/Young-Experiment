@@ -397,7 +397,7 @@ Ara sí que has arribat al final del treball, abans, però, com que ja sabem que
     
     # OPTIONS MENU
     herzosLabel = Label(50, 50, "Freqüència:")
-    herzos = Entry(200, 50, text="60 Hz")
+    herzos = Entry(200, 100, text="60 Hz")
     applySettings = Button(60, 150, "Aplicar")
     jajaLabel = Label(300, 40, "Ja t'agradaria Ivan", font='arial', size=32)
     ostrichImage = pygame.image.load('data/avestruz.png').convert()
@@ -408,7 +408,9 @@ Ara sí que has arribat al final del treball, abans, però, com que ja sabem que
     # EXPLANATION MENU
     brawlStarsImage = pygame.transform.scale(
         pygame.image.load('data/brawlStars.png').convert_alpha(), (500, 190))
-    
+    lastSound = 0
+    thresholdTime = 45
+    startTime = time.time()
     textLabel = Label(5, 5, multiline=True, size=28, font='Arial', text="""L'experiment de Young va ser portat a terme pel científic anglès Thomas Young (1773-1829)
 el 1804, és a dir, dos anys abans de tenir 33 anys. Aquest experiment va servir per validar el 
 model ondulatori, mentre que el corpuscular va ser rebutjat.
@@ -544,6 +546,11 @@ visualitzar els diferents patrons d'interferència (constructiva i destructiva) 
         elif MENU == "EXPLANATION":
             textLabel.draw(DISPLAY)
             DISPLAY.blit(brawlStarsImage, (230, 820))
+            if lastSound - startTime >= thresholdTime:
+                lastSound = time.time()
+                startTime = time.time()
+                pygame.mixer.music.play()
+            lastSound = time.time()
 
         elif MENU == "THANKS":
             thanksText.draw(DISPLAY)
