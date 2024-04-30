@@ -397,7 +397,7 @@ Ara sí que has arribat al final del treball, abans, però, com que ja sabem que
     
     # OPTIONS MENU
     herzosLabel = Label(50, 50, "Freqüència:")
-    herzos = Entry(200, 100, text="60 Hz")
+    herzos = Entry(200, 50, text="60 Hz")
     applySettings = Button(60, 150, "Aplicar")
     jajaLabel = Label(300, 40, "Ja t'agradaria Ivan", font='arial', size=32)
     ostrichImage = pygame.image.load('data/avestruz.png').convert()
